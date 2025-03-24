@@ -42,7 +42,6 @@ public class TasksController {
             System.out.println("Введите новый приоритет (Enter для пропуска): ");
             String priorityStr = scanner.nextLine();
             int newPriority = priorityStr.isEmpty() ? null : Integer.parseInt(priorityStr);
-            // make func on infinity circle for request
             toDoList.editTask(index, newTitle.isEmpty() ? null : newTitle, newPriority);
         }catch (NumberFormatException e) {
             System.out.println("Ошибка: Неверный формат ввода");
